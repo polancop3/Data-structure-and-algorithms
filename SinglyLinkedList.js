@@ -96,6 +96,32 @@ class LinkedList {
         return false;
     }
 
+    insert(index, val) {
+        if(index < 0 || index > this.length) {
+            return false;
+        }
+
+        if(index === this.length){
+            this.push(val);
+            return true;
+        }
+
+        if(index === 0){
+            this.unshift(val);
+            return true;
+        } else {
+            this.get(-1)
+        }
+        let newNode = new Node(val);
+        let prev = this.get(index - 1)
+        let temp = prev.next;
+        prev.next = newNode
+        newNode.next = temp;
+        this.length++;
+        return true;
+
+    }
+
 
     // traverse() {
     //     let current = this.head;
@@ -109,9 +135,7 @@ class LinkedList {
 }
 
 let t = new LinkedList();
-t.push(12)
-t.push(13)
-t.push(14)
-t.push(16)
-t.set(0,20)
+t.insert(0,5)
+t.insert(1,6)
+t.insert(1,24)
 console.log(t)
