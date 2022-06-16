@@ -123,19 +123,26 @@ class LinkedList {
     }
 
 
-    // traverse() {
-    //     let current = this.head;
+    traverse() {
+        let current = this.head;
 
-    //     while(current) {
-    //         console.log(current.val);
-
-    //         current = current.next;
-    //     }
-    // }
+        while(current) {
+            console.log(current.val);
+            current = current.next;
+        }
+    }
 }
 
-let t = new LinkedList();
-t.insert(0,5)
-t.insert(1,6)
-t.insert(1,24)
-console.log(t)
+/*
+A singly linked list a collection of nodes with pointer towards the next node
+*/
+
+/* Big O
+Insertion O(1)
+Deletion O(1) or O(N)
+Searching O(N)
+Access O(N)
+
+*/
+
+//Efficien deletion and insertion
