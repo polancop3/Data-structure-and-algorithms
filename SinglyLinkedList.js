@@ -122,16 +122,43 @@ class LinkedList {
 
     }
 
-
-    traverse() {
-        let current = this.head;
-
-        while(current) {
-            console.log(current.val);
-            current = current.next;
+    remove(index){
+        if(index < 0 || index > this.length){
+            return undefined;
         }
+
+        if(index === 0){
+           return this.unshift(index);
+        }
+
+        if(index === this.length){
+           return this.pop(index)
+        } 
+        let prev = this.get(index - 1);
+        let removed = prev.next
+        prev.next = removed.next;
+        this.length--;
+        return removed;
+    }
+
+    reverse(){
+        let node = this.head;
+        this.head = this.tail;
+        this.tail = node;
+
+        let next;
+        let prev = null;
+        for(let i = 0; i < this.length; i++){
+            next = node.next;
+            node.next = prev;
+            prev = node;
+            node = next;
+        }
+        return this;
     }
 }
+    
+
 
 /*
 A singly linked list a collection of nodes with pointer towards the next node
