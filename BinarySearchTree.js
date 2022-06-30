@@ -118,7 +118,7 @@ tree.insert(20)
 
 console.log(tree.dfsPreOrder())
 
-/**
+/** BST
  * A sorted data structure consisting of nodes with a parent,child and sibling relationship.
  * values less than the root are kept in the left pointer and greater than the root at the right pointer.
  * -----------
