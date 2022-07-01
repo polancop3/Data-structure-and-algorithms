@@ -93,30 +93,50 @@ class BinarySearchTree {
   }
   /** Depth search first
    * visit one side of the tree first
+   * useful to copy or export a tree
    **/
   dfsPreOrder() {
     let visited = [];
     let current = this.root;
     
-    function helper(node){
+    function traverse(node){
       visited.push(node.value);
-      if(node.left) helper(node.left);
-      if(node.right) helper(node.right);
+      if(node.left) traverse(node.left);
+      if(node.right) traverse(node.right);
     }
-    helper(current)
+    traverse(current)
+    return visited;
+  }
+
+  //traverse from the bottom
+  dfsPostOrder() {
+    let visited = [];
+    let current = this.root;
+    
+    function traverse(node){
+      if(node.left) traverse(node.left);
+      if(node.right) traverse(node.right);
+      visited.push(node.value);
+    }
+    traverse(current)
+    return visited;
+  }
+
+  //traverse all left node first, meaning you get nodes in ascending order
+  dfsInOrder() {
+    let visited = [];
+    let current = this.root;
+    
+    function traverse(node){
+      if(node.left) traverse(node.left);
+        visited.push(node.value);
+      if(node.right) traverse(node.right);
+    }
+    traverse(current)
     return visited;
   }
 }
 
-let tree = new BinarySearchTree();
-tree.insert(10)
-tree.insert(6)
-tree.insert(3)
-tree.insert(8)
-tree.insert(15)
-tree.insert(20)
-
-console.log(tree.dfsPreOrder())
 
 /** BST
  * A sorted data structure consisting of nodes with a parent,child and sibling relationship.
