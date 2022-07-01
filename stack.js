@@ -47,5 +47,6 @@ Access O(N)
 Searching O(N)
 */
 
-//LIFO = Last element in First element out
-//Are used in redo/undo operations, handle function invocations and routing  such as back and forward
+/**LIFO = Last element in First element out
+Are used in redo/undo operations, handle function invocations and routing  such as back and forward
+*/

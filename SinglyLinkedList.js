@@ -159,17 +159,11 @@ class LinkedList {
 }
     
 
-
-/*
-A singly linked list a collection of nodes with pointer towards the next node
-*/
-
-/* Big O
+/*Big O
 Insertion O(1)
 Deletion O(1) or O(N)
 Searching O(N)
 Access O(N)
-
+Efficient deletion and insertion
+A singly linked list a collection of nodes with pointer towards the next node
 */
-
-//Efficien deletion and insertion

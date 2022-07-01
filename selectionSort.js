@@ -21,4 +21,4 @@ function selectionSort(arr) {
 
 selectionSort(array)
 
-//Time complexity of Big O(n^2)
+/**Time complexity of Big O(n^2) */
