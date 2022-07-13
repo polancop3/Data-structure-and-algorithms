@@ -13,6 +13,5 @@ function insertionSort(arr){
     }
     return arr;
 }
-
 // O(n^2)
 insertionSort(array)

@@ -138,9 +138,12 @@ class BinarySearchTree {
 }
 
 
-/** BST
+/**
+ * Trees are non lineanr data structures with a root node and children node
+ *  BST
  * A sorted data structure consisting of nodes with a parent,child and sibling relationship.
  * values less than the root are kept in the left pointer and greater than the root at the right pointer.
+ * We can search trees using BFS AND DFS
  * -----------
  * Big O
  * Insertion - O(log n)
